@@ -1,0 +1,29 @@
+﻿Readme
+
+The folder contains the source code for myhttpd.c and  reqQueue.h, makefile and readme file.
+
+Please compile the files in the following pattern:
+Server code:
+gcc myhttpd.c -o myhttpd -lpthread
+./a.out (followed by the arguments)
+
+
+The format of the request should be in the following way:
+
+On command line: <action> <filename> <HTTP Version>
+Eg: GET /index.html HTTP/1.0
+
+On browser: http://<ipaddress>:<port number>/<filename>
+Eg: http://127.0.0.1:8087/index.html
+
+
+runtimeoptions:
+You can log the details of the requests giving the command line argument as -l <filepath>
+You can change the thread number by using the command -n <threadnum>
+You can change the scheduling policy to SJF or FCFS using the command -s <schedule-type>
+You can know the summary of all the options using the command -h where the server exits immediately.
+You need to change the port number every run of the server using the command -p <port-number>
+You can change the root directory of the server by using the command -r <directory-path>
+You can change the queuing time using the command -t <time in seconds>
+
+
